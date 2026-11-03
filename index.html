@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXPENSE TRACKER</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>YourOwnExpenseTrackingMind</h2>
+    <a href="#">Dashboard</a>
+    <a href="#">Transactions</a>
+    <a href="#">Budgets</a>
+    <a href="#">Reports</a>
+    <a href="#">Settings</a>
+</div>
+
+<div class="main">
+    <h1>Dashboard</h1>
+    <p>Welcome back! Here's your financial overview.</p>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Total Balance</h3>
+            <h2 id="balance">₹25,000</h2>
+        </div>
+
+        <div class="card">
+            <h3>Total Income</h3>
+            <h2 id="income">₹30,000</h2>
+        </div>
+
+        <div class="card">
+            <h3>Total Expenses</h3>
+            <h2 id="expense">₹5,000</h2>
+        </div>
+    </div>
+
+    <div class="transactions">
+        <h2>Recent Transactions</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Date</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+
+            <tbody id="transactionList">
+                <tr>
+                    <td>Salary</td>
+                    <td>Income</td>
+                    <td>01 Nov 2026</td>
+                    <td class="income">+₹30,000</td>
+                </tr>
+
+                <tr>
+                    <td>Shopping</td>
+                    <td>Personal</td>
+                    <td>02 Nov 2026</td>
+                    <td class="expense">-₹3,000</td>
+                </tr>
+
+                <tr>
+                    <td>Food</td>
+                    <td>Food</td>
+                    <td>03 Nov 2026</td>
+                    <td class="expense">-₹2,000</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="add">
+        <h2>Add Transaction</h2>
+
+        <form id="transactionForm">
+            <input type="text" id="name" placeholder="Transaction Name" required>
+
+            <select id="type">
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+            </select>
+
+            <input type="number" id="amount" placeholder="Amount" required>
+
+            <input type="date" id="date" required>
+
+            <button type="submit">Add Transaction</button>
+        </form>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
